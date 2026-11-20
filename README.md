@@ -45,3 +45,19 @@ Customers see VCB Bank and Finabank transfer details at checkout, select a JPG, 
 - Dark/light theme preference is saved locally in the visitor's browser.
 - GitHub Pages is static hosting; it does not process payments, verify transfers, store uploaded proof, manage inventory, or provide a private admin dashboard.
 - The example product artwork and product data are placeholders. Replace them before launch.
+
+
+## Latest store settings
+
+- WhatsApp order number: `5978743042` (Suriname country code + number 874 3042)
+- Bank details are displayed in the checkout payment section:
+  - VCB Bank: `811 308 285`
+  - Finabank: `100 220 3177`
+  - Beneficiary: `Don van Rijn`
+
+The bank details are part of the public static website configuration and are visible to visitors at checkout. The About Me page still contains a portrait placeholder until the owner photo is supplied.
+
+
+## About page portrait
+
+The founder portrait is stored as `about-portrait.png` and displayed only in the About Me / Over mij section. The existing `store-logo.png` remains the site logo and favicon; it has not been replaced.

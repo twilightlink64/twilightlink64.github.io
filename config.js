@@ -1,11 +1,11 @@
 /*
   TWILIGHT DUSK STUDIOS — STORE SETTINGS
   Public bank transfer details are shown at checkout.
-  Replace the WhatsApp number and contact email before accepting orders.
+  WhatsApp number is configured. Update the contact email before accepting orders.
 */
 window.STORE_CONFIG = {
   storeName: "Twilight Dusk Studios",
-  whatsappNumber: "59700000000",
+  whatsappNumber: "5978743042",
   currency: "SRD",
   beneficiary: "Don van Rijn",
   bankAccounts: [
