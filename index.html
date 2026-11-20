@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171923">
+  <meta name="description" content="A retro-inspired independent online store.">
+  <title>PIXEL MARKET — Independent Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">✦ INDEPENDENT GOODS • MADE TO STAND OUT • PARAMARIBO, SURINAME ✦</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Pixel Market home"><span class="brand-mark">P<span>✳</span></span><span>PIXEL<span class="brand-muted">MARKET</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">SHOP</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme">☼</button>
+      <button class="cart-button" id="openCart">BAG <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> THE GOOD STUFF IS HERE</p>
+        <h1>GOOD FINDS.<br><span>GOOD VIBES.</span></h1>
+        <p class="hero-description">A little corner of the internet for things worth keeping. Discover the latest drops from our independent store.</p>
+        <a class="primary-button" href="#shop">EXPLORE THE STORE <span>↘</span></a>
+        <div class="hero-meta"><span>EST. 2026</span><span>✳</span><span>BUILT IN SURINAME</span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative retro graphic">
+        <div class="sun"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-sticker">NEW<br>DROP<br><b>/// 026</b></div>
+        <div class="hero-art-caption">OBJECTS<br>WITH CHARACTER<span>✳</span></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Store highlights"><div>FRESH FINDS <b>✳</b> EASY CHECKOUT <b>✳</b> LOCAL LOVE <b>✳</b> FRESH FINDS <b>✳</b> EASY CHECKOUT <b>✳</b> LOCAL LOVE <b>✳</b></div></section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION / 001</p><h2>THE LATEST <span>DROP.</span></h2></div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Find something..." aria-label="Search products"></label>
+      </div>
+      <div class="category-row" id="categories">
+        <button class="category active" data-category="All">ALL ITEMS</button>
+        <button class="category" data-category="Apparel">APPAREL</button>
+        <button class="category" data-category="Accessories">ACCESSORIES</button>
+        <button class="category" data-category="Lifestyle">LIFESTYLE</button>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="about-strip" id="about">
+      <div class="about-symbol">✳</div><div><p class="eyebrow">A SMALL STORE WITH BIG ENERGY</p><h2>NOT JUST ANOTHER<br>ONLINE STORE.</h2></div>
+      <p>We're building a place for interesting finds, thoughtful details and good local energy. Replace this text with your own store story.</p>
+    </section>
+
+    <section class="contact-strip" id="contact">
+      <div><p class="eyebrow">NEED A HAND?</p><h2>LET'S TALK.</h2><p>Questions about an item or an order? Get in touch and we'll help you out.</p></div>
+      <a class="outline-button" id="contactLink" href="#">CONTACT THE STORE ↗</a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">P<span>✳</span></span><span>PIXEL<span class="brand-muted">MARKET</span></span></a><span>© <span id="year"></span> PIXEL MARKET. ALL RIGHTS RESERVED.</span><span>MADE WITH ✳ IN SURINAME</span></footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>YOUR BAG <span id="drawerCount">(0)</span></h2></div><button class="close-button" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your bag is waiting for something good.</p></div>
+    <div class="cart-footer">
+      <div class="subtotal"><span>SUBTOTAL</span><strong id="cartSubtotal">SRD 0.00</strong></div>
+      <p class="fine-print">Delivery fees, if applicable, will be confirmed with you before payment.</p>
+      <button class="primary-button checkout-button" id="checkoutButton">CONTINUE TO CHECKOUT <span>↗</span></button>
+    </div>
+  </aside>
+
+  <dialog id="checkoutDialog" class="checkout-dialog">
+    <form method="dialog" class="dialog-top"><div><p class="eyebrow">ALMOST THERE</p><h2>CHECKOUT.</h2></div><button class="close-button" aria-label="Close checkout">×</button></form>
+    <form id="checkoutForm" class="checkout-form">
+      <label>FULL NAME<input name="name" required autocomplete="name" placeholder="Your name"></label>
+      <label>PHONE / WHATSAPP<input name="phone" required autocomplete="tel" placeholder="+597 ..."></label>
+      <label>EMAIL <span class="optional">(OPTIONAL)</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+      <label>DELIVERY / DIGITAL DELIVERY DETAILS<textarea name="notes" rows="2" placeholder="Delivery address, pickup details or email for digital delivery"></textarea></label>
+      <section class="bank-instructions">
+        <p class="eyebrow">PAYMENT / BANK TRANSFER ONLY</p>
+        <p id="bankInstructionsText">Bank transfer details will appear here.</p>
+        <p class="fine-print">Transfer the exact order total. Your preorder is not confirmed until the transfer has been checked by the store.</p>
+      </section>
+      <label class="upload-label">UPLOAD PROOF OF TRANSFER <span class="optional">REQUIRED · JPG, PNG OR PDF</span>
+        <input id="paymentProof" name="paymentProof" type="file" accept="image/jpeg,image/png,application/pdf" required>
+        <span class="upload-help">Choose a clear screenshot, photo or PDF receipt. Maximum file size: 8 MB.</span>
+      </label>
+      <p class="file-status" id="fileStatus" aria-live="polite">No proof selected yet.</p>
+      <div class="checkout-total"><span>PREORDER TOTAL</span><strong id="checkoutTotal">SRD 0.00</strong></div>
+      <button class="primary-button checkout-button" type="submit">CONTINUE TO WHATSAPP <span>↗</span></button>
+      <p class="fine-print">After WhatsApp opens, attach the proof file to the chat and send the message. Selecting a file here does not upload it to the store or attach it automatically to WhatsApp.</p>
+      <p class="form-error" id="formError" role="alert"></p>
+    </form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
