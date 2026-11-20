@@ -1,9 +1,11 @@
 const CONFIG = window.STORE_CONFIG || {};
 const PRODUCTS = [
-  { id: 1, name: "Retro Club Tee", nl: "Retro Club T-shirt", category: "Apparel", type: "Physical", price: 450, tag: "PREORDER", symbol: "✳", code: "TDS / 001" },
-  { id: 2, name: "Everyday Tote", nl: "Everyday draagtas", category: "Accessories", type: "Physical", price: 275, tag: "PREORDER", symbol: "▧", code: "TDS / 002" },
-  { id: 3, name: "Digital Wallpaper Pack", nl: "Digitale wallpaperbundel", category: "Digital", type: "Digital", price: 125, tag: "DIGITAL", symbol: "▦", code: "TDS / 003" },
-  { id: 4, name: "Printable Planner", nl: "Printbare planner", category: "Digital", type: "Digital", price: 195, tag: "DIGITAL", symbol: "✴", code: "TDS / 004" }
+  { id: 1, name: "S.S.E.R.C. Polo Shirt", nl: "S.S.E.R.C. Poloshirt", descEn: "Navy polo with the S.S.E.R.C. emblem on the chest.", descNl: "Marineblauwe polo met het S.S.E.R.C.-embleem op de borst.", category: "Apparel", type: "Physical", price: 650, tag: "PREORDER", image: "products/sserc-polo.png", code: "SSERC / 001" },
+  { id: 2, name: "S.S.E.R.C. Signature Hoodie", nl: "S.S.E.R.C. Signature Hoodie", descEn: "Navy hoodie with a bold S.S.E.R.C. front design.", descNl: "Marineblauwe hoodie met opvallend S.S.E.R.C.-ontwerp op de voorkant.", category: "Apparel", type: "Physical", price: 1100, tag: "PREORDER", image: "products/sserc-hoodie.png", code: "SSERC / 002" },
+  { id: 3, name: "S.S.E.R.C. Explorer Tote Bag", nl: "S.S.E.R.C. Explorer Tote Bag", descEn: "Cream tote bag with navy handles and the S.S.E.R.C. emblem.", descNl: "Crèmekleurige draagtas met marineblauwe hengsels en S.S.E.R.C.-embleem.", category: "Accessories", type: "Physical", price: 275, tag: "PREORDER", image: "products/sserc-totebag.png", code: "SSERC / 003" },
+  { id: 4, name: "S.S.E.R.C. Mission Notebook", nl: "S.S.E.R.C. Mission Notebook", descEn: "Navy spiral notebook with a rocket-launch illustration.", descNl: "Marineblauw notitieboek met spiraalbinding en raketlanceringillustratie.", category: "Accessories", type: "Physical", price: 225, tag: "PREORDER", image: "products/sserc-notebook.png", code: "SSERC / 004" },
+  { id: 5, name: "S.S.E.R.C. Mission Lanyard", nl: "S.S.E.R.C. Mission Lanyard", descEn: "Navy printed lanyard with a metal hook and detachable buckle.", descNl: "Bedrukte marineblauwe lanyard met metalen haak en afneembare gesp.", category: "Accessories", type: "Physical", price: 175, tag: "PREORDER", image: "products/sserc-lanyard.png", code: "SSERC / 005" },
+  { id: 6, name: "S.S.E.R.C. Space Sticker Pack", nl: "S.S.E.R.C. Space Sticker Pack", descEn: "A set of space-exploration themed S.S.E.R.C. stickers.", descNl: "Een set S.S.E.R.C.-stickers met ruimtevaartthema.", category: "Stickers", type: "Physical", price: 75, tag: "PREORDER", symbol: "✦", code: "SSERC / 006" }
 ];
 const TEXT = {
   nl: {
@@ -72,10 +74,10 @@ const TEXT_PAGE = {
   announcement:"✦ TWILIGHT DUSK STUDIOS • ONAFHANKELIJK • PARAMARIBO, SURINAME ✦",navShop:"SHOP",navAbout:"OVER MIJ",navContact:"CONTACT",bag:"WINKELTAS",
   eyebrow:"GOEDE VONDSTEN, GOEDE SFEER",heroTitle:"GOEDE VONDSTEN.<br><span>GOEDE VIBES.</span>",heroDescription:"Een eigenzinnige plek op het internet voor bijzondere items. Ontdek de nieuwste releases van Twilight Dusk Studios.",explore:"ONTDEK DE WEBSHOP",
   newDrop:"NIEUWE<br>DROP<br><b>/// 026</b>",artCaption:"OBJECTEN<br>MET KARAKTER<span>✳</span>",ticker:"NIEUWE VONDSTEN <b>✳</b> EENVOUDIG BESTELLEN <b>✳</b> LOKALE LIEFDE <b>✳</b> NIEUWE VONDSTEN <b>✳</b> EENVOUDIG BESTELLEN <b>✳</b> LOKALE LIEFDE <b>✳</b>",
-  collection:"DE COLLECTIE / 001",latest:"DE NIEUWSTE <span>DROP.</span>",searchPlaceholder:"Zoek iets...",catAll:"ALLES",catApparel:"KLEDING",catAccessories:"ACCESSOIRES",catDigital:"DIGITAAL",
+  collection:"DE COLLECTIE / 001",latest:"DE NIEUWSTE <span>DROP.</span>",searchPlaceholder:"Zoek iets...",catAll:"ALLES",catApparel:"KLEDING",catAccessories:"ACCESSOIRES",catStickers:"STICKERS",catDigital:"DIGITAAL",
   aboutEyebrow:"EEN KLEINE STUDIO MET GROTE ENERGIE",aboutTitle:"NIET ZOMAAR<br>EEN WEBSHOP.",aboutBlurb:"Twilight Dusk Studios brengt fysieke en digitale producten samen met een eigen retro-uitstraling. Ontdek het verhaal achter de studio.",
   needHelp:"HULP NODIG?",letsTalk:"LATEN WE PRATEN.",contactBlurb:"Heb je een vraag over een product of preorder? Neem gerust contact op.",contactStore:"NEEM CONTACT OP",madeIn:"GEMAAKT MET ✳ IN SURINAME",
-  yourSelection:"JOUW SELECTIE",yourBag:"JOUW WINKELTAS",subtotal:"SUBTOTAAL",deliveryNote:"Eventuele bezorgkosten worden vóór betaling met je bevestigd.",continueCheckout:"DOORGAAN NAAR AFREKENEN",
+  yourSelection:"JOUW SELECTIE",yourBag:"JOUW WINKELTAS",subtotal:"TOTAAL (INCL. BTW)",vatIncluded:"Waarvan 10% BTW",deliveryNote:"Eventuele bezorgkosten worden vóór betaling met je bevestigd.",continueCheckout:"DOORGAAN NAAR AFREKENEN",
   almostThere:"BIJNA KLAAR",checkout:"AFREKENEN.",fullName:"VOLLEDIGE NAAM",phone:"TELEFOON / WHATSAPP",email:"E-MAIL",optional:"(OPTIONEEL)",deliveryDetails:"BEZORGING / DIGITALE LEVERING",deliveryPlaceholder:"Adres, ophaalgegevens of e-mailadres voor digitale levering",
   bankTransfer:"BETALING / BANKOVERSCHRIJVING",bankNote:"Maak het exacte orderbedrag over. Je preorder is pas bevestigd nadat de betaling is gecontroleerd.",uploadProof:"BEWIJS VAN OVERBOEKING UPLOADEN",fileRequired:"VERPLICHT · JPG, PNG OF PDF",uploadHelp:"Kies een duidelijke screenshot, foto of PDF-bon. Maximaal 8 MB.",noFile:"Nog geen bewijs geselecteerd.",orderTotal:"TOTAAL PREORDER",continueWhatsapp:"VERDER NAAR WHATSAPP",whatsappAttach:"Nadat WhatsApp opent, voeg je het bewijsbestand handmatig toe aan het gesprek en verstuur je het bericht. Het bestand wordt niet automatisch geüpload of bijgevoegd."
  },
@@ -83,10 +85,10 @@ const TEXT_PAGE = {
   announcement:"✦ TWILIGHT DUSK STUDIOS • INDEPENDENT • PARAMARIBO, SURINAME ✦",navShop:"SHOP",navAbout:"ABOUT ME",navContact:"CONTACT",bag:"BAG",
   eyebrow:"GOOD FINDS, GOOD VIBES",heroTitle:"GOOD FINDS.<br><span>GOOD VIBES.</span>",heroDescription:"An independent corner of the internet for things worth keeping. Discover the latest releases from Twilight Dusk Studios.",explore:"EXPLORE THE STORE",
   newDrop:"NEW<br>DROP<br><b>/// 026</b>",artCaption:"OBJECTS<br>WITH CHARACTER<span>✳</span>",ticker:"FRESH FINDS <b>✳</b> EASY CHECKOUT <b>✳</b> LOCAL LOVE <b>✳</b> FRESH FINDS <b>✳</b> EASY CHECKOUT <b>✳</b> LOCAL LOVE <b>✳</b>",
-  collection:"THE COLLECTION / 001",latest:"THE LATEST <span>DROP.</span>",searchPlaceholder:"Find something...",catAll:"ALL ITEMS",catApparel:"APPAREL",catAccessories:"ACCESSORIES",catDigital:"DIGITAL",
+  collection:"THE COLLECTION / 001",latest:"THE LATEST <span>DROP.</span>",searchPlaceholder:"Find something...",catAll:"ALL ITEMS",catApparel:"APPAREL",catAccessories:"ACCESSORIES",catStickers:"STICKERS",catDigital:"DIGITAL",
   aboutEyebrow:"A SMALL STUDIO WITH BIG ENERGY",aboutTitle:"NOT JUST ANOTHER<br>ONLINE STORE.",aboutBlurb:"Twilight Dusk Studios brings physical and digital products together with its own retro-inspired identity. Discover the story behind the studio.",
   needHelp:"NEED A HAND?",letsTalk:"LET'S TALK.",contactBlurb:"Questions about a product or preorder? Feel free to get in touch.",contactStore:"CONTACT THE STUDIO",madeIn:"MADE WITH ✳ IN SURINAME",
-  yourSelection:"YOUR SELECTION",yourBag:"YOUR BAG",subtotal:"SUBTOTAL",deliveryNote:"Any delivery fees will be confirmed with you before payment.",continueCheckout:"CONTINUE TO CHECKOUT",
+  yourSelection:"YOUR SELECTION",yourBag:"YOUR BAG",subtotal:"TOTAL (VAT INCL.)",vatIncluded:"Including 10% VAT",deliveryNote:"Any delivery fees will be confirmed with you before payment.",continueCheckout:"CONTINUE TO CHECKOUT",
   almostThere:"ALMOST THERE",checkout:"CHECKOUT.",fullName:"FULL NAME",phone:"PHONE / WHATSAPP",email:"EMAIL",optional:"(OPTIONAL)",deliveryDetails:"DELIVERY / DIGITAL DELIVERY",deliveryPlaceholder:"Address, pickup details or email for digital delivery",
   bankTransfer:"PAYMENT / BANK TRANSFER ONLY",bankNote:"Transfer the exact order total. Your preorder is only confirmed after payment has been verified.",uploadProof:"UPLOAD PROOF OF TRANSFER",fileRequired:"REQUIRED · JPG, PNG OR PDF",uploadHelp:"Choose a clear screenshot, photo or PDF receipt. Maximum 8 MB.",noFile:"No proof selected yet.",orderTotal:"PREORDER TOTAL",continueWhatsapp:"CONTINUE TO WHATSAPP",whatsappAttach:"After WhatsApp opens, manually attach the proof file to the chat and send the message. The file is not automatically uploaded or attached."
  }
@@ -100,15 +102,16 @@ function renderProducts() {
  const term = ($("#searchInput").value || "").trim().toLowerCase();
  const visible = PRODUCTS.filter(p => (activeCategory === "All" || p.category === activeCategory) && `${p.name} ${p.nl} ${p.category}`.toLowerCase().includes(term));
  $("#productGrid").innerHTML = visible.length ? visible.map(p => `
-  <article class="product-card"><div class="product-art">${p.tag ? `<span class="product-tag">${p.tag}</span>` : ""}<div class="art-shape">${p.symbol}</div><span class="art-code">${p.code}</span></div>
-  <div class="product-info"><h3>${language === "nl" ? p.nl : p.name}</h3><small class="fulfillment-label">${p.type === "Digital" ? TEXT[language].digital : TEXT[language].physical} · ${TEXT[language].preorder}</small>
-  <div class="product-bottom"><span class="product-price">${money(p.price)}</span><button class="add-button" data-add="${p.id}">${TEXT[language].add}</button></div></div></article>`).join("") : `<p class="no-results">${TEXT[language].noResults}</p>`;
+  <article class="product-card"><div class="product-art product-photo">${p.tag ? `<span class="product-tag">${p.tag}</span>` : ""}${p.image ? `<img src="${p.image}" alt="${language === "nl" ? p.nl : p.name}" loading="lazy">` : `<div class="sticker-placeholder"><span>✦</span><b>S.S.E.R.C.</b><small>SPACE STICKER PACK</small></div>`}<span class="art-code">${p.code}</span></div>
+  <div class="product-info"><h3>${language === "nl" ? p.nl : p.name}</h3><p class="product-description">${language === "nl" ? p.descNl : p.descEn}</p><small class="fulfillment-label">${p.type === "Digital" ? TEXT[language].digital : TEXT[language].physical} · ${TEXT[language].preorder}</small>
+  <div class="product-bottom"><span class="product-price">${money(p.price)} <small class="vat-included">${language === "nl" ? "incl. BTW" : "incl. VAT"}</small></span><button class="add-button" data-add="${p.id}">${TEXT[language].add}</button></div></div></article>`).join("") : `<p class="no-results">${TEXT[language].noResults}</p>`;
 }
 function total(){return cart.reduce((s,i)=>s+i.price*i.qty,0);}
 function renderCart(){
  const count=cart.reduce((s,i)=>s+i.qty,0);
  $("#cartCount").textContent=count; $("#drawerCount").textContent=`(${count})`;
  $("#cartSubtotal").textContent=money(total()); $("#checkoutTotal").textContent=money(total());
+ $("#cartVat").textContent=money(total()/11); $("#checkoutVat").textContent=money(total()/11);
  $("#cartItems").innerHTML=cart.length?cart.map(i=>`<div class="cart-line"><div class="cart-thumb">${i.symbol}</div><div><h4>${language==="nl"?i.nl:i.name}</h4><small>${money(i.price)} ${language==="nl"?"PER STUK":"EACH"}</small><div class="qty-controls"><button data-qty="${i.id}" data-delta="-1" aria-label="${TEXT[language].decrease}">−</button><span>${i.qty}</span><button data-qty="${i.id}" data-delta="1" aria-label="${TEXT[language].increase}">+</button></div></div><button class="remove-button" data-remove="${i.id}" aria-label="${TEXT[language].remove}">×</button></div>`).join(""):`<p class="empty-cart">${TEXT[language].empty}</p>`;
  $("#checkoutButton").disabled=!cart.length; $("#checkoutButton").style.opacity=cart.length?"1":".45";
 }
@@ -146,7 +149,8 @@ $("#checkoutForm").addEventListener("submit",e=>{
  const data=new FormData(e.currentTarget);
  const lines=cart.map(i=>`• ${language==="nl"?i.nl:i.name} × ${i.qty} — ${money(i.price*i.qty)} (${i.type})`).join("\n");
  const message=[
- TEXT[language].whatsappIntro,"",lines,"",`${TEXT[language].total}: ${money(total())}`,TEXT[language].payment,
+ TEXT[language].whatsappIntro,"",lines,"",`${TEXT[language].total}: ${money(total())} (incl. 10% ${language==="nl"?"BTW":"VAT"})`,
+ `${language==="nl"?"Waarvan BTW":"VAT included"}: ${money(total()/11)}`,TEXT[language].payment,
  `${TEXT[language].name}: ${data.get("name")}`,`${TEXT[language].phone}: ${data.get("phone")}`,
  `${TEXT[language].email}: ${data.get("email")||TEXT[language].none}`,`${TEXT[language].delivery}: ${data.get("notes")||TEXT[language].notes}`,
  "",`${TEXT[language].proof} (${proof.name})`,"",TEXT[language].verify

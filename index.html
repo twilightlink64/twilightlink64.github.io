@@ -50,7 +50,7 @@
         <button class="category active" data-category="All" data-i18n="catAll">ALLES</button>
         <button class="category" data-category="Apparel" data-i18n="catApparel">KLEDING</button>
         <button class="category" data-category="Accessories" data-i18n="catAccessories">ACCESSOIRES</button>
-        <button class="category" data-category="Digital" data-i18n="catDigital">DIGITAAL</button>
+        <button class="category" data-category="Stickers" data-i18n="catStickers">STICKERS</button>
       </div>
       <div class="product-grid" id="productGrid" aria-live="polite"></div>
     </section>
@@ -73,7 +73,8 @@
     <div class="drawer-head"><div><p class="eyebrow" data-i18n="yourSelection">JOUW SELECTIE</p><h2><span data-i18n="yourBag">JOUW WINKELTAS</span> <span id="drawerCount">(0)</span></h2></div><button class="close-button" id="closeCart" aria-label="Sluiten">×</button></div>
     <div class="cart-items" id="cartItems"><p class="empty-cart" data-i18n="emptyCart">Je winkelmand wacht op iets leuks.</p></div>
     <div class="cart-footer">
-      <div class="subtotal"><span data-i18n="subtotal">SUBTOTAAL</span><strong id="cartSubtotal">SRD 0.00</strong></div>
+      <div class="subtotal"><span data-i18n="subtotal">TOTAAL (INCL. BTW)</span><strong id="cartSubtotal">SRD 0.00</strong></div>
+      <div class="tax-line"><span data-i18n="vatIncluded">Waarvan 10% BTW</span><strong id="cartVat">SRD 0.00</strong></div>
       <p class="fine-print" data-i18n="deliveryNote">Eventuele bezorgkosten worden vóór betaling met je bevestigd.</p>
       <button class="primary-button checkout-button" id="checkoutButton"><span data-i18n="continueCheckout">DOORGAAN NAAR AFREKENEN</span> <span>↗</span></button>
     </div>
@@ -96,7 +97,8 @@
         <span class="upload-help" data-i18n="uploadHelp">Kies een duidelijke screenshot, foto of PDF-bon. Maximaal 8 MB.</span>
       </label>
       <p class="file-status" id="fileStatus" aria-live="polite" data-i18n="noFile">Nog geen bewijs geselecteerd.</p>
-      <div class="checkout-total"><span data-i18n="orderTotal">TOTAAL PREORDER</span><strong id="checkoutTotal">SRD 0.00</strong></div>
+      <div class="checkout-total"><span data-i18n="orderTotal">TOTAAL PREORDER (INCL. BTW)</span><strong id="checkoutTotal">SRD 0.00</strong></div>
+      <div class="tax-line"><span data-i18n="vatIncluded">Waarvan 10% BTW</span><strong id="checkoutVat">SRD 0.00</strong></div>
       <button class="primary-button checkout-button" type="submit"><span data-i18n="continueWhatsapp">VERDER NAAR WHATSAPP</span> <span>↗</span></button>
       <p class="fine-print" data-i18n="whatsappAttach">Nadat WhatsApp opent, voeg je het bewijsbestand handmatig toe aan het gesprek en verstuur je het bericht. Het bestand wordt niet automatisch geüpload of bijgevoegd.</p>
       <p class="form-error" id="formError" role="alert"></p>

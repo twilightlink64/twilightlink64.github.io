@@ -61,3 +61,18 @@ The bank details are part of the public static website configuration and are vis
 ## About page portrait
 
 The founder portrait is stored as `about-portrait.png` and displayed only in the About Me / Over mij section. The existing `store-logo.png` remains the site logo and favicon; it has not been replaced.
+
+
+## S.S.E.R.C. merchandise catalogue
+
+The sample catalogue has been replaced with the six products specified by the owner:
+- S.S.E.R.C. Polo Shirt — SRD 650 (VAT inclusive)
+- S.S.E.R.C. Signature Hoodie — SRD 1,100 (VAT inclusive)
+- S.S.E.R.C. Explorer Tote Bag — SRD 275 (VAT inclusive)
+- S.S.E.R.C. Mission Notebook — SRD 225 (VAT inclusive)
+- S.S.E.R.C. Mission Lanyard — SRD 175 (VAT inclusive)
+- S.S.E.R.C. Space Sticker Pack — SRD 75 (VAT inclusive; sticker product artwork still needs the actual sticker photo/design)
+
+The prices are suggested starting retail prices, not supplier quotations. The website treats them as VAT-inclusive totals. At a 10% VAT rate, the VAT component included in a gross price is gross / 11. Confirm your VAT registration and product-specific treatment with the Suriname Tax Office/accountant before selling.
+
+Product photography crops are in `products/`. The drink-bottle and keychain items visible in the uploaded mood boards were not added because they were not in the six-item product list.
