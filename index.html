@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="nl" data-language="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171923">
+  <meta name="description" content="Twilight Dusk Studios — onafhankelijke retro-geïnspireerde webshop.">
+  <title>Twilight Dusk Studios — Webshop</title>
+  <link rel="icon" type="image/png" href="store-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement" data-i18n="announcement">✦ TWILIGHT DUSK STUDIOS • ONAFHANKELIJK • PARAMARIBO, SURINAME ✦</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Twilight Dusk Studios home"><img class="brand-logo" src="store-logo.png" alt="Twilight Dusk Studios logo"><span class="brand-name">TWILIGHT DUSK<br><span class="brand-muted">STUDIOS</span></span></a>
+    <nav class="desktop-nav" aria-label="Hoofdnavigatie">
+      <a href="#shop" data-i18n="navShop">SHOP</a><a href="about.html" data-i18n="navAbout">OVER MIJ</a><a href="#contact" data-i18n="navContact">CONTACT</a>
+    </nav>
+    <div class="header-actions">
+      <div class="language-switch" aria-label="Taal kiezen"><button type="button" class="language-button active" data-lang="nl">NL</button><button type="button" class="language-button" data-lang="en">EN</button></div>
+      <button class="icon-button" id="themeToggle" aria-label="Wissel licht en donker thema" title="Wissel thema">☼</button>
+      <button class="cart-button" id="openCart"><span data-i18n="bag">WINKELTAS</span> <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span><span data-i18n="eyebrow">GOEDE VONDSTEN, GOEDE SFEER</span></p>
+        <h1 data-i18n="heroTitle">GOEDE VONDSTEN.<br><span>GOEDE VIBES.</span></h1>
+        <p class="hero-description" data-i18n="heroDescription">Een eigenzinnige plek op het internet voor bijzondere items. Ontdek de nieuwste releases van Twilight Dusk Studios.</p>
+        <a class="primary-button" href="#shop"><span data-i18n="explore">ONTDEK DE WEBSHOP</span> <span>↘</span></a>
+        <div class="hero-meta"><span>EST. 2026</span><span>✳</span><span>SURINAME</span></div>
+      </div>
+      <div class="hero-art" aria-label="Retro decoratieve afbeelding">
+        <div class="sun"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-sticker" data-i18n="newDrop">NIEUWE<br>DROP<br><b>/// 026</b></div>
+        <div class="hero-art-caption" data-i18n="artCaption">OBJECTEN<br>MET KARAKTER<span>✳</span></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Webshop kenmerken"><div data-i18n="ticker">NIEUWE VONDSTEN <b>✳</b> EENVOUDIG BESTELLEN <b>✳</b> LOKALE LIEFDE <b>✳</b> NIEUWE VONDSTEN <b>✳</b> EENVOUDIG BESTELLEN <b>✳</b> LOKALE LIEFDE <b>✳</b></div></section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="collection">DE COLLECTIE / 001</p><h2 data-i18n="latest">DE NIEUWSTE <span>DROP.</span></h2></div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Zoek iets..." aria-label="Zoek producten" data-i18n-placeholder="searchPlaceholder"></label>
+      </div>
+      <div class="category-row" id="categories">
+        <button class="category active" data-category="All" data-i18n="catAll">ALLES</button>
+        <button class="category" data-category="Apparel" data-i18n="catApparel">KLEDING</button>
+        <button class="category" data-category="Accessories" data-i18n="catAccessories">ACCESSOIRES</button>
+        <button class="category" data-category="Digital" data-i18n="catDigital">DIGITAAL</button>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="about-strip">
+      <div class="about-symbol">✳</div><div><p class="eyebrow" data-i18n="aboutEyebrow">EEN KLEINE STUDIO MET GROTE ENERGIE</p><h2 data-i18n="aboutTitle">NIET ZOMAAR<br>EEN WEBSHOP.</h2></div>
+      <p data-i18n="aboutBlurb">Twilight Dusk Studios brengt fysieke en digitale producten samen met een eigen retro-uitstraling. Ontdek het verhaal achter de studio.</p>
+    </section>
+
+    <section class="contact-strip" id="contact">
+      <div><p class="eyebrow" data-i18n="needHelp">HULP NODIG?</p><h2 data-i18n="letsTalk">LATEN WE PRATEN.</h2><p data-i18n="contactBlurb">Heb je een vraag over een product of preorder? Neem gerust contact op.</p></div>
+      <a class="outline-button" id="contactLink" href="#"><span data-i18n="contactStore">NEEM CONTACT OP</span> ↗</a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><img class="brand-logo" src="store-logo.png" alt=""><span class="brand-name">TWILIGHT DUSK<br><span class="brand-muted">STUDIOS</span></span></a><span>© <span id="year"></span> TWILIGHT DUSK STUDIOS.</span><span data-i18n="madeIn">GEMAAKT MET ✳ IN SURINAME</span></footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Winkelmand" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow" data-i18n="yourSelection">JOUW SELECTIE</p><h2><span data-i18n="yourBag">JOUW WINKELTAS</span> <span id="drawerCount">(0)</span></h2></div><button class="close-button" id="closeCart" aria-label="Sluiten">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart" data-i18n="emptyCart">Je winkelmand wacht op iets leuks.</p></div>
+    <div class="cart-footer">
+      <div class="subtotal"><span data-i18n="subtotal">SUBTOTAAL</span><strong id="cartSubtotal">SRD 0.00</strong></div>
+      <p class="fine-print" data-i18n="deliveryNote">Eventuele bezorgkosten worden vóór betaling met je bevestigd.</p>
+      <button class="primary-button checkout-button" id="checkoutButton"><span data-i18n="continueCheckout">DOORGAAN NAAR AFREKENEN</span> <span>↗</span></button>
+    </div>
+  </aside>
+
+  <dialog id="checkoutDialog" class="checkout-dialog">
+    <form method="dialog" class="dialog-top"><div><p class="eyebrow" data-i18n="almostThere">BIJNA KLAAR</p><h2 data-i18n="checkout">AFREKENEN.</h2></div><button class="close-button" aria-label="Sluiten">×</button></form>
+    <form id="checkoutForm" class="checkout-form">
+      <label><span data-i18n="fullName">VOLLEDIGE NAAM</span><input name="name" required autocomplete="name" placeholder="Je naam"></label>
+      <label><span data-i18n="phone">TELEFOON / WHATSAPP</span><input name="phone" required autocomplete="tel" placeholder="+597 ..."></label>
+      <label><span data-i18n="email">E-MAIL</span> <span class="optional" data-i18n="optional">(OPTIONEEL)</span><input name="email" type="email" autocomplete="email" placeholder="jij@example.com"></label>
+      <label><span data-i18n="deliveryDetails">BEZORGING / DIGITALE LEVERING</span><textarea name="notes" rows="2" placeholder="Adres, ophaalgegevens of e-mailadres voor digitale levering" data-i18n-placeholder="deliveryPlaceholder"></textarea></label>
+      <section class="bank-instructions">
+        <p class="eyebrow" data-i18n="bankTransfer">BETALING / BANKOVERSCHRIJVING</p>
+        <p id="bankInstructionsText">Bankgegevens worden hier getoond.</p>
+        <p class="fine-print" data-i18n="bankNote">Maak het exacte orderbedrag over. Je preorder is pas bevestigd nadat de betaling is gecontroleerd.</p>
+      </section>
+      <label class="upload-label"><span data-i18n="uploadProof">BEWIJS VAN OVERBOEKING UPLOADEN</span> <span class="optional" data-i18n="fileRequired">VERPLICHT · JPG, PNG OF PDF</span>
+        <input id="paymentProof" name="paymentProof" type="file" accept="image/jpeg,image/png,application/pdf" required>
+        <span class="upload-help" data-i18n="uploadHelp">Kies een duidelijke screenshot, foto of PDF-bon. Maximaal 8 MB.</span>
+      </label>
+      <p class="file-status" id="fileStatus" aria-live="polite" data-i18n="noFile">Nog geen bewijs geselecteerd.</p>
+      <div class="checkout-total"><span data-i18n="orderTotal">TOTAAL PREORDER</span><strong id="checkoutTotal">SRD 0.00</strong></div>
+      <button class="primary-button checkout-button" type="submit"><span data-i18n="continueWhatsapp">VERDER NAAR WHATSAPP</span> <span>↗</span></button>
+      <p class="fine-print" data-i18n="whatsappAttach">Nadat WhatsApp opent, voeg je het bewijsbestand handmatig toe aan het gesprek en verstuur je het bericht. Het bestand wordt niet automatisch geüpload of bijgevoegd.</p>
+      <p class="form-error" id="formError" role="alert"></p>
+    </form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
